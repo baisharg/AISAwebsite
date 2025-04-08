@@ -136,7 +136,7 @@ header {
 
 /* Hero Section */
 .hero {
-	background: #000 url("../images/hero.jpg") no-repeat center center/cover; /* Placeholder */
+	/* background: #000 url('../images/hero.jpg') no-repeat center center/cover; /* Placeholder - Uncomment and update path when image is added */ */
 	/* Fallback solid color */
 	background-color: #1a1a1a;
 	color: #ffffff;
