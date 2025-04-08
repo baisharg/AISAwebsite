@@ -140,9 +140,9 @@ header {
 	/* Fallback solid color */
 	background-color: #1a1a1a;
 	color: #ffffff;
-	padding: 6rem 0;
+	padding: 2rem 0; /* Reduced vertical padding */
 	text-align: center;
-	min-height: 60vh;
+	min-height: 20vh; /* Reduced minimum height */
 	display: flex;
 	align-items: center;
 	justify-content: center;
