@@ -1,0 +1,525 @@
+/* General Styles */
+body {
+	background-color: #000000;
+	color: #ffffff;
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	font-size: 16px;
+}
+
+.container {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Montserrat", sans-serif;
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+
+h1 {
+	font-size: 2.8rem;
+}
+h2 {
+	font-size: 2.2rem;
+}
+h3 {
+	font-size: 1.8rem;
+}
+h4 {
+	font-size: 1.4rem;
+}
+
+a {
+	color: #f2a900; /* Gold/Yellow */
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: #e6a000; /* Darker gold on hover */
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* Header & Navigation */
+header {
+	background-color: #000000;
+	padding: 1rem 0;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	border-bottom: 1px solid #f2a900; /* Gold border */
+}
+
+.navbar .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.nav-links {
+	display: flex;
+}
+
+.nav-links li {
+	margin-left: 2rem;
+}
+
+.nav-links a {
+	color: #ffffff;
+	font-weight: 400;
+	padding-bottom: 0.3rem;
+	position: relative;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+	color: #f2a900;
+	border-bottom: 2px solid #f2a900;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+	display: none; /* Hidden by default, shown in responsive.css */
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+.hamburger {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: #ffffff;
+	position: relative;
+	transition: background-color 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: #ffffff;
+	left: 0;
+	transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+	top: -8px;
+}
+
+.hamburger::after {
+	bottom: -8px;
+}
+
+/* Hero Section */
+.hero {
+	background: #000 url("../images/hero.jpg") no-repeat center center/cover; /* Placeholder */
+	/* Fallback solid color */
+	background-color: #1a1a1a;
+	color: #ffffff;
+	padding: 6rem 0;
+	text-align: center;
+	min-height: 60vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative; /* For potential overlay */
+}
+
+.hero::before {
+	/* Optional overlay for better text visibility */
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+	z-index: 1;
+}
+
+.hero .container {
+	position: relative;
+	z-index: 2;
+}
+
+.hero h1 {
+	font-size: 3.5rem;
+	margin-bottom: 1rem;
+}
+
+.hero .tagline {
+	font-size: 1.4rem;
+	margin-bottom: 2rem;
+	opacity: 0.9;
+}
+
+.cta-button {
+	display: inline-block;
+	background-color: #f2a900;
+	color: #000000;
+	padding: 0.8rem 1.8rem;
+	border-radius: 5px;
+	font-weight: 700;
+	margin: 0.5rem;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+	background-color: #e6a000;
+	transform: translateY(-2px);
+	color: #000000;
+}
+
+/* Section Styling */
+section {
+	padding: 4rem 0;
+}
+
+.mission, .featured-activities, /* Add other sections as needed */ {
+	background-color: #000000;
+}
+
+.mission h2,
+.featured-activities h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.divider {
+	border: 0;
+	height: 2px;
+	background: #f2a900;
+	width: 80px;
+	margin: 2rem auto;
+}
+
+/* Featured Activities Grid */
+.activity-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.activity-item {
+	background-color: #1a1a1a; /* Slightly lighter black */
+	padding: 2rem;
+	border-radius: 8px;
+	border: 1px solid #333;
+	text-align: center;
+}
+
+.activity-item h3 {
+	color: #f2a900;
+	margin-bottom: 1rem;
+}
+
+.learn-more {
+	display: inline-block;
+	margin-top: 1rem;
+	color: #f2a900;
+	font-weight: 700;
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.3s ease;
+}
+
+.learn-more:hover {
+	border-bottom-color: #f2a900;
+}
+
+/* Page Title Section */
+.page-title {
+	background-color: #111; /* Slightly different background */
+	padding: 3rem 0;
+	text-align: center;
+}
+
+.page-title h1 {
+	margin-bottom: 0.5rem;
+}
+
+.page-title p {
+	font-size: 1.2rem;
+	color: #ccc;
+}
+
+/* Values List (About Page) */
+.values-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.value-item {
+	background-color: #1a1a1a;
+	padding: 1.5rem;
+	border-radius: 5px;
+	border-left: 4px solid #f2a900; /* Gold accent */
+}
+
+.value-item h3 {
+	color: #f2a900;
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+}
+
+/* Founding Orgs Section */
+.founding-orgs-section {
+	background-color: #0a0a0a; /* Slightly different dark background */
+}
+
+.founding-orgs-section h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.org-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.org-card {
+	background-color: #1a1a1a;
+	padding: 2rem;
+	border-radius: 8px;
+	border: 1px solid #333;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.org-logo {
+	max-width: 100px; /* Adjust as needed */
+	height: auto;
+	margin-bottom: 1rem;
+	background-color: #555; /* Placeholder background for visibility */
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.org-card h3 {
+	color: #f2a900;
+	margin-bottom: 1rem;
+	font-size: 1.6rem;
+}
+
+.org-card p {
+	margin-bottom: 1.5rem;
+	flex-grow: 1; /* Push link to bottom if needed */
+}
+
+/* Research Page Specific Styles */
+.airtable-embed-placeholder {
+	background-color: #1a1a1a;
+	border: 1px dashed #555;
+	padding: 3rem 1rem;
+	text-align: center;
+	margin-top: 1rem;
+	color: #aaa;
+	border-radius: 5px;
+}
+
+.research-list {
+	margin-top: 2rem;
+}
+
+.research-item {
+	background-color: #1a1a1a;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-radius: 5px;
+	border-left: 4px solid #f2a900;
+}
+
+.research-item h4 {
+	color: #f2a900;
+	margin-bottom: 0.5rem;
+}
+
+.research-item p {
+	margin-bottom: 0.5rem;
+}
+
+/* Contact Page Specific Styles */
+.contact-details {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.contact-item {
+	margin-bottom: 1rem;
+}
+
+.contact-item h3 {
+	color: #f2a900;
+	margin-bottom: 0.5rem;
+}
+
+.contact-form {
+	max-width: 700px;
+	margin: 2rem auto 0 auto;
+	background-color: #1a1a1a;
+	padding: 2rem;
+	border-radius: 8px;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: #ccc;
+	font-weight: 700;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+	width: 100%;
+	padding: 0.8rem;
+	background-color: #333;
+	border: 1px solid #555;
+	color: #ffffff;
+	border-radius: 4px;
+	box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	border-color: #f2a900;
+	outline: none; /* Remove default focus ring, rely on border */
+}
+
+.contact-form button[type="submit"] {
+	/* Uses existing .cta-button styles */
+	width: 100%;
+	cursor: pointer;
+}
+
+#form-status {
+	text-align: center;
+	margin-top: 1rem;
+	font-weight: 700;
+}
+
+/* Footer */
+footer {
+	background-color: #111;
+	color: #ccc;
+	padding: 3rem 0 1rem 0;
+	margin-top: 4rem;
+	border-top: 2px solid #f2a900;
+}
+
+.footer-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+	flex: 1;
+	min-width: 200px;
+}
+
+.footer-about h3 {
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+
+.footer-links h4,
+.footer-social h4 {
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+
+.footer-links ul li {
+	margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+	color: #ccc;
+}
+
+.footer-links a:hover {
+	color: #f2a900;
+}
+
+.footer-social a {
+	display: inline-block;
+	color: #f2a900; /* Gold icons */
+	font-size: 1.5rem; /* Adjust if using icons */
+	margin-right: 1rem;
+	transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+	color: #ffffff;
+}
+
+.footer-bottom {
+	text-align: center;
+	margin-top: 2rem;
+	padding-top: 1rem;
+	border-top: 1px solid #444;
+	font-size: 0.9rem;
+	color: #aaa;
+}
+
+/* Accessibility */
+/* Add focus styles for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+	outline: 2px solid #f2a900;
+	outline-offset: 2px;
+}
+
+.menu-toggle:focus {
+	outline: none; /* Custom focus for hamburger */
+}
+
+.menu-toggle:focus .hamburger {
+	outline: 2px solid #f2a900;
+	outline-offset: 2px;
+}
